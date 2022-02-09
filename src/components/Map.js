@@ -27,7 +27,7 @@ const Map = ({ location, zoomLevel }) => (
 
 const LocationPin = () => (
   <div>
-    <div className="marker-text">Spongdalsvegen 579</div>
+    <div className="marker-text">Snillet Gård, Spongdalsvegen 579</div>
     <FaMapMarkerAlt className="pin" size={40} />
   </div>
 )
