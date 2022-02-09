@@ -1,0 +1,17 @@
+.gifts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gifts-list {
+  font-size: 25px;
+  list-style: none;
+  max-width: 900px;
+  text-align: left;
+}
+
+.gifts-list-item {
+  margin: 10px;
+}

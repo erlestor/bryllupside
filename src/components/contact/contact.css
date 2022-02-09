@@ -1,0 +1,17 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-list {
+  font-size: 25px;
+  list-style: none;
+  max-width: 900px;
+  text-align: left;
+}
+
+.contact-list-item {
+  margin: 10px;
+}

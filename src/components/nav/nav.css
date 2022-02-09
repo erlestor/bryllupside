@@ -16,6 +16,20 @@
   display: none;
 }
 
+.link {
+  font-size: 30px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: rgb(130, 130, 130);
+    transition: 0.3s ease-in-out;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -35,15 +49,4 @@
   .link {
     margin-top: 20px;
   }
-}
-
-.link {
-  font-size: 30px;
-  cursor: pointer;
-  width: 100%;
-  text-align: center;
-}
-
-.link:hover {
-  color: rgb(130, 130, 130);
 }

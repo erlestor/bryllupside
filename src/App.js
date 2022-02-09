@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
-import GiftIdeas from "./components/GiftIdeas"
-import HeroSection from "./components/HeroSection"
-import { Location } from "./components/Location"
-import { Navbar } from "./components/Navbar"
-import Transport from "./components/Transport"
+import { Contact } from "./components/contact/Contact"
+import GiftIdeas from "./components/giftIdeas/GiftIdeas"
+import HeroSection from "./components/hero/HeroSection"
+import { Location } from "./components/location/Location"
+import { Navbar } from "./components/nav/Navbar"
+import Transport from "./components/transport/Transport"
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -34,6 +35,7 @@ function App() {
         <Location />
         <Transport />
         <GiftIdeas />
+        <Contact />
       </div>
     </div>
   )

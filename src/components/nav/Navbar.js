@@ -63,6 +63,17 @@ export const Navbar = ({ showNavbar, toggle }) => {
         >
           Gaveideer
         </LinkS>
+        <LinkS
+          className="link"
+          to="gifts"
+          smooth={true}
+          duration={700}
+          spy={true}
+          exact="true"
+          // offset={-80}
+        >
+          Kontakt
+        </LinkS>
       </div>
     </div>
   )
