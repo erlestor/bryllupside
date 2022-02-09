@@ -21,6 +21,7 @@ function App() {
   }
 
   useEffect(() => {
+    updateSidebarOpen()
     window.addEventListener("resize", updateSidebarOpen)
     return () => window.removeEventListener("resize", updateSidebarOpen)
   }, [])
