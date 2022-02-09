@@ -1,0 +1,13 @@
+ul {
+  font-size: 30px;
+  list-style: none;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin: 10px;
+}

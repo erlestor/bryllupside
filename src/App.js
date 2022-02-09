@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react"
+import GiftIdeas from "./components/GiftIdeas"
+import HeroSection from "./components/HeroSection"
+import { Location } from "./components/Location"
+import { Navbar } from "./components/Navbar"
+import Transport from "./components/Transport"
 
 function App() {
+  const [showNavbar, setShowNavbar] = useState(false)
+
+  const toggle = () => {
+    setShowNavbar(!showNavbar)
+  }
+
+  const updateSidebarOpen = () => {
+    if (window.innerWidth > 768) {
+      setShowNavbar(true)
+    } else if (window.innerWidth < 768) {
+      setShowNavbar(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateSidebarOpen)
+    return () => window.removeEventListener("resize", updateSidebarOpen)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar showNavbar={showNavbar} toggle={toggle} />
+      <HeroSection />
+      <div className="content">
+        <Location />
+        <Transport />
+        <GiftIdeas />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

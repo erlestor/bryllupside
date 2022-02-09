@@ -1,0 +1,49 @@
+.nav-container {
+  margin: 20px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    transition: 0.3s linear;
+  }
+
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  .link {
+    margin-top: 20px;
+  }
+}
+
+.link {
+  font-size: 30px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.link:hover {
+  color: rgb(130, 130, 130);
+}
