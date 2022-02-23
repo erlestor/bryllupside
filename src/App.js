@@ -4,6 +4,7 @@ import GiftIdeas from "./components/giftIdeas/GiftIdeas"
 import HeroSection from "./components/hero/HeroSection"
 import { Location } from "./components/location/Location"
 import { Navbar } from "./components/nav/Navbar"
+import ScrollToTop from "./components/nav/ScrollToTop"
 import Transport from "./components/transport/Transport"
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Transport />
         <GiftIdeas />
         <Contact />
+        <ScrollToTop />
       </div>
     </div>
   )
