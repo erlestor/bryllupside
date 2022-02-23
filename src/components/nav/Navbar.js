@@ -28,7 +28,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
           exact="true"
           // offset={-80}
         >
-          Tidspunkt
+          <h2>Tidspunkt</h2>
         </LinkS>
         <LinkS
           className="link"
@@ -39,7 +39,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
           exact="true"
           // offset={-80}
         >
-          Lokasjon
+          <h2>Lokasjon</h2>
         </LinkS>
         <LinkS
           className="link"
@@ -50,7 +50,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
           exact="true"
           // offset={-80}
         >
-          Transport
+          <h2>Transport</h2>
         </LinkS>
         <LinkS
           className="link"
@@ -61,7 +61,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
           exact="true"
           // offset={-80}
         >
-          Gaveideer
+          <h2>Gaveideer</h2>
         </LinkS>
         <LinkS
           className="link"
@@ -72,7 +72,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
           exact="true"
           // offset={-80}
         >
-          Kontakt
+          <h2>Kontakt</h2>
         </LinkS>
       </div>
     </div>

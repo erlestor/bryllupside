@@ -4,7 +4,7 @@ const Transport = () => {
   return (
     <div className="transport section" id="transport">
       <h1>Transport</h1>
-      <p>
+      <p className="transport-info">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin enim
         libero, mattis nec nunc id, facilisis elementum leo. In hac habitasse
         platea dictumst. Nunc molestie vestibulum justo id accumsan. Cras

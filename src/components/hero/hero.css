@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 6rem;
   color: white;
   text-shadow: 4px 4px black;
   user-select: none;
@@ -15,4 +15,14 @@
 
 .hero-text {
   margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    font-size: 4rem;
+    height: 600px;
+  }
+
+  .hero-text {
+  }
 }

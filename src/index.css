@@ -1,22 +1,58 @@
+:root {
+  --text-color: #2f2f2f;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: normal;
   text-align: center;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--text-color);
 }
 
 p {
-  max-width: 900px;
-  font-size: 20px;
-  text-align: left;
-  margin-left: 50px;
-  margin-right: 50px;
+  font-size: 1.25rem;
+  color: var(--text-color);
 }
 
 .section {
   margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }

@@ -5,9 +5,9 @@ export const Contact = () => {
     <div className="section contact">
       <h1>Kontakt oss</h1>
       <div className="contact-list">
-        <div className="contact-list-item">Astrid Marie Storsve: tlfnr her</div>
-        <div className="contact-list-item">Alexander Nordgaard: tlfnr her</div>
-        <div className="contact-list-item">Toastmaster: tlfnr her</div>
+        <h3 className="contact-list-item">Astrid Marie Storsve: tlfnr her</h3>
+        <h3 className="contact-list-item">Alexander Nordgaard: tlfnr her</h3>
+        <h3 className="contact-list-item">Toastmaster: tlfnr her</h3>
       </div>
     </div>
   )

@@ -1,6 +1,5 @@
 .nav-container {
   margin: 20px;
-  min-height: 50px;
   display: flex;
   align-items: center;
   user-select: none;
@@ -17,15 +16,14 @@
 }
 
 .link {
-  font-size: 30px;
   cursor: pointer;
   width: 100%;
   text-align: center;
 }
 
 @media (hover: hover) {
-  .link:hover {
-    color: rgb(130, 130, 130);
+  .link h2:hover {
+    color: #9f9f9f;
     transition: 0.3s ease-in-out;
   }
 }
@@ -47,6 +45,6 @@
   }
 
   .link {
-    margin-top: 20px;
+    height: 50px;
   }
 }
