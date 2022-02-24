@@ -1,18 +1,28 @@
 import Map from "./Map"
-
+import "./location.css"
 // dette er mapcontainer
-
-const location = {
-  address: "Spongdalsvegen 579, 7074 Spongdal",
-  lat: 63.376249,
-  lng: 10.164493,
-}
 
 export const Location = () => {
   return (
-    <div id="location" className="section">
+    <div id="location" className="section location">
       <h1>Lokasjon</h1>
-      <Map location={location} zoomLevel={18} />
+      <div className="locations-container">
+        <h3 className="location-text">
+          <b>Vielse</b>
+          <br />
+          Klæbu kirke
+          <br />
+          Prestegårdsvegen 43
+        </h3>
+        <h3 className="location-text">
+          <b>Selskap</b>
+          <br />
+          Snillet gård
+          <br />
+          Spongdalsvegen 579
+        </h3>
+      </div>
+      <Map />
     </div>
   )
 }

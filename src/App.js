@@ -2,13 +2,16 @@ import { useState, useEffect } from "react"
 import { Contact } from "./components/contact/Contact"
 import GiftIdeas from "./components/giftIdeas/GiftIdeas"
 import HeroSection from "./components/hero/HeroSection"
+import HeroText from "./components/hero/HeroText"
 import { Location } from "./components/location/Location"
 import { Navbar } from "./components/nav/Navbar"
 import ScrollToTop from "./components/nav/ScrollToTop"
+import Password from "./components/password/Password"
 import Transport from "./components/transport/Transport"
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false)
 
   const toggle = () => {
     setShowNavbar(!showNavbar)
@@ -30,15 +33,22 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar showNavbar={showNavbar} toggle={toggle} />
-      <HeroSection />
-      <div className="content">
-        <Location />
-        <Transport />
-        <GiftIdeas />
-        <Contact />
-        <ScrollToTop />
-      </div>
+      {loggedIn ? (
+        <>
+          <Navbar showNavbar={showNavbar} toggle={toggle} />
+          <HeroSection />
+          <div className="content">
+            <HeroText />
+            <Location />
+            <Transport />
+            <GiftIdeas />
+            <Contact />
+            <ScrollToTop />
+          </div>
+        </>
+      ) : (
+        <Password setLoggedIn={setLoggedIn} />
+      )}
     </div>
   )
 }

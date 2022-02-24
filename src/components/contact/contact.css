@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #c08691;
+  margin-bottom: 0;
+  padding-bottom: 40px;
 }
 
 .contact-list {

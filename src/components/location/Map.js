@@ -4,30 +4,45 @@ import "./map.css"
 
 import { FaMapMarkerAlt } from "react-icons/fa"
 
-const Map = ({ location, zoomLevel }) => (
-  <div className="map">
-    <div className="google-map">
-      <GoogleMapReact
-        bootstrapURLKeys={{
-          key: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",
-        }}
-        defaultCenter={location}
-        defaultZoom={zoomLevel}
-        options={getMapOptions}
-      >
-        <LocationPin
-          lat={location.lat}
-          lng={location.lng}
-          text={location.address}
-        />
-      </GoogleMapReact>
-    </div>
+const selskapLocation = {
+  address: "Spongdalsvegen 579, 7074 Spongdal",
+  lat: 63.376249,
+  lng: 10.164493,
+}
+
+const vielseLocation = {
+  address: "Prestegårdsvegen 43, 7540 Klæbu",
+  lat: 63.29535,
+  lng: 10.47656,
+}
+
+const Map = ({ zoomLevel }) => (
+  <div className="google-map">
+    <GoogleMapReact
+      bootstrapURLKeys={{
+        key: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",
+      }}
+      defaultCenter={selskapLocation}
+      defaultZoom={16}
+      options={getMapOptions}
+    >
+      <LocationPin
+        lat={selskapLocation.lat}
+        lng={selskapLocation.lng}
+        text={selskapLocation.address}
+      />
+      <LocationPin
+        lat={vielseLocation.lat}
+        lng={vielseLocation.lng}
+        text={vielseLocation.address}
+      />
+    </GoogleMapReact>
   </div>
 )
 
-const LocationPin = () => (
+const LocationPin = ({ text }) => (
   <div>
-    <div className="marker-text">Snillet Gård, Spongdalsvegen 579</div>
+    <div className="marker-text">{text}</div>
     <FaMapMarkerAlt className="pin" size={40} />
   </div>
 )

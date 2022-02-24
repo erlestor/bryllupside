@@ -6,17 +6,14 @@
   text-align: center;
 }
 
-.map {
+.google-map {
   display: flex;
   justify-content: center;
-}
-
-.google-map {
   width: 100vw;
   height: 60vh;
 }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 768px) {
   .google-map {
     height: 60vh;
     width: 70vw;

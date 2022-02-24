@@ -1,5 +1,6 @@
 {
   "name": "bryllupside",
+  "homepage": "http://bryllup.nordgaard.co",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
