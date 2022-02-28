@@ -8,6 +8,10 @@
   padding-bottom: 40px;
 }
 
+.contact h1 {
+  margin-bottom: 10px;
+}
+
 .contact-list {
   font-size: 25px;
   list-style: none;
@@ -16,5 +20,8 @@
 }
 
 .contact-list-item {
-  margin: 10px;
+}
+
+.contact-header {
+  margin-top: 40px;
 }

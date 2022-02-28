@@ -21,14 +21,14 @@ export const Navbar = ({ showNavbar, toggle }) => {
       >
         <LinkS
           className="link"
-          to="hero"
+          to="info"
           smooth={true}
           duration={700}
           spy={true}
           exact="true"
           // offset={-80}
         >
-          <h2>Tidspunkt</h2>
+          <h2>Tidsplan</h2>
         </LinkS>
         <LinkS
           className="link"
@@ -61,7 +61,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
           exact="true"
           // offset={-80}
         >
-          <h2>Gaveideer</h2>
+          <h2>Gaveønsker</h2>
         </LinkS>
         <LinkS
           className="link"

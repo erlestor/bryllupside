@@ -66,6 +66,8 @@
   transition: 0.3s ease-in-out;
 }
 
-.scroll-to-top-btn:hover {
-  background-color: #555;
+@media (hover: hover) {
+  .scroll-to-top-btn:hover {
+    background-color: #555;
+  }
 }
