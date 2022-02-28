@@ -1,12 +1,10 @@
 .gifts {
+  max-width: 800px;
   display: flex;
-  align-self: flex-end;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: white;
   padding: 20px;
-  width: 750px;
 }
 
 .gifts-list {
@@ -16,18 +14,4 @@
 
 .gifts-list-item {
   margin: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .gifts {
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-  }
 }

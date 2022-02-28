@@ -3,10 +3,9 @@ import { useState } from "react"
 
 const Password = ({ setLoggedIn }) => {
   const [password, setPassword] = useState("")
+
   const handleSubmit = () => {
-    if (password === "ViGifterOss") {
-      setLoggedIn(true)
-    }
+    if (password === "ViGifterOss") setLoggedIn(true)
   }
 
   return (
