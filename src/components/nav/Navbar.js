@@ -65,7 +65,7 @@ export const Navbar = ({ showNavbar, toggle }) => {
         </LinkS>
         <LinkS
           className="link"
-          to="gifts"
+          to="contact"
           smooth={true}
           duration={700}
           spy={true}
