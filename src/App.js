@@ -11,7 +11,12 @@ import Transport from "./components/transport/Transport"
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("loggedIn")
+    const initialValue = JSON.parse(saved)
+    return initialValue || false
+  })
 
   const toggle = () => {
     setShowNavbar(!showNavbar)

@@ -5,7 +5,10 @@ const Password = ({ setLoggedIn }) => {
   const [password, setPassword] = useState("")
 
   const handleSubmit = () => {
-    if (password === "ViGifterOss") setLoggedIn(true)
+    if (password === "ViGifterOss") {
+      setLoggedIn(true)
+      localStorage.setItem("loggedIn", JSON.stringify(true))
+    }
   }
 
   return (
