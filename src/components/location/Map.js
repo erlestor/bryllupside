@@ -41,8 +41,8 @@ const Map = ({ zoomLevel }) => (
 )
 
 const LocationPin = ({ text }) => (
-  <div>
-    <div className="marker-text">{text}</div>
+  <div className="pin-container">
+    <div className="pin-text">{text}</div>
     <FaMapMarkerAlt className="pin" size={40} />
   </div>
 )

@@ -32,6 +32,23 @@ p {
   color: var(--text-color);
 }
 
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("./images/bilde_4k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  user-select: none;
+  /* overflow hidden here is to fix google maps responsive issue. bad code though */
+  overflow-x: hidden;
+}
+
 .section {
   margin: 100px 0 100px 0;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -57,19 +74,4 @@ p {
   p {
     font-size: 1rem;
   }
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-image: url("./images/bilde_fade.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  user-select: none;
 }

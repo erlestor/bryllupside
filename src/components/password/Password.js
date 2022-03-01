@@ -9,21 +9,20 @@ const Password = ({ setLoggedIn }) => {
   }
 
   return (
-    <div className="password-page">
+    <form className="password-page">
       <h1>Passord:</h1>
       <input
         type="password"
         placeholder="passord"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button
+      <input
         onClick={handleSubmit}
-        text="Gå til side"
+        value="Gå til side"
         className="password-btn"
-      >
-        Gå til siden
-      </button>
-    </div>
+        type="submit"
+      />
+    </form>
   )
 }
 

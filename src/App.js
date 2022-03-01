@@ -11,7 +11,7 @@ import Transport from "./components/transport/Transport"
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
 
   const toggle = () => {
     setShowNavbar(!showNavbar)
@@ -35,8 +35,8 @@ function App() {
     <div className="App">
       {loggedIn ? (
         <>
-          <Navbar showNavbar={showNavbar} toggle={toggle} />
-          <div className="content">
+          <div className="page">
+            <Navbar showNavbar={showNavbar} toggle={toggle} />
             <HeroText />
             <Info />
             <Location />
