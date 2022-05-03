@@ -2,7 +2,7 @@ import Map from "./Map"
 import "./location.css"
 // dette er mapcontainer
 
-export const Location = () => {
+export const Location = ({ mapIsLoaded }) => {
   return (
     <div id="location" className="section location">
       <h1>Lokasjon</h1>
@@ -22,7 +22,7 @@ export const Location = () => {
           Spongdalsvegen 579
         </h3>
       </div>
-      <Map />
+      <Map mapIsLoaded={mapIsLoaded} />
     </div>
   )
 }

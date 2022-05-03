@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { useLoadScript } from "@react-google-maps/api"
 import { Contact } from "./components/contact/Contact"
 import GiftIdeas from "./components/giftIdeas/GiftIdeas"
 import HeroText from "./components/hero/HeroText"
@@ -11,11 +12,17 @@ import Transport from "./components/transport/Transport"
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
-  const [loggedIn, setLoggedIn] = useState(() => {
-    // getting stored value
-    const saved = localStorage.getItem("loggedIn")
-    const initialValue = JSON.parse(saved)
-    return initialValue || false
+  // const [loggedIn, setLoggedIn] = useState(() => {
+  //   // getting stored value
+  //   const saved = localStorage.getItem("loggedIn")
+  //   const initialValue = JSON.parse(saved)
+  //   return initialValue || false
+  // })
+  const [loggedIn, setLoggedIn] = useState(true)
+
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",
+    libraries: ["places"],
   })
 
   const toggle = () => {
@@ -44,8 +51,8 @@ function App() {
             <Navbar showNavbar={showNavbar} toggle={toggle} />
             <HeroText />
             <Info />
-            <Location />
-            <Transport />
+            <Location mapIsLoaded={isLoaded} />
+            <Transport mapIsLoaded={isLoaded} />
             <GiftIdeas />
             <Contact />
             <ScrollToTop />

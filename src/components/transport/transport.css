@@ -1,12 +1,3 @@
-.transport {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  padding: 20px;
-}
-
 .transport-info {
   text-align: left;
   margin-left: 50px;

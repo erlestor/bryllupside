@@ -2,8 +2,7 @@
   --text-color: #2f2f2f;
 }
 
-body,
-html {
+body {
   margin: 0;
   padding: 0;
 }
@@ -32,8 +31,45 @@ p {
   color: var(--text-color);
 }
 
+.section {
+  margin: 100px 0 100px 0;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  padding: 20px;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .info-section {
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+}
+
 .page {
-  width: 100%;
   display: flex;
   flex-direction: column;
   background-image: url("./images/bilde_4k.jpg");
@@ -47,31 +83,4 @@ p {
   user-select: none;
   /* overflow hidden here is to fix google maps responsive issue. bad code though */
   overflow-x: hidden;
-}
-
-.section {
-  margin: 100px 0 100px 0;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-    font-weight: normal;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-
-  h3 {
-    font-size: 1rem;
-    font-weight: normal;
-  }
-
-  p {
-    font-size: 1rem;
-  }
 }

@@ -1,0 +1,2 @@
+Todo:
+- endre rammeverk på lokasjon kartet slik at man bare bruke google maps api en gang

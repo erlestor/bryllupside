@@ -1,4 +1,3 @@
-import React from "react"
 import GoogleMapReact from "google-map-react"
 import "./map.css"
 
@@ -16,7 +15,7 @@ const vielseLocation = {
   lng: 10.47656,
 }
 
-const Map = ({ zoomLevel }) => (
+const Map = ({ mapIsLoaded }) => (
   <div className="google-map">
     <GoogleMapReact
       bootstrapURLKeys={{
