@@ -1,2 +1,5 @@
 Todo:
-- endre rammeverk på lokasjon kartet slik at man bare bruke google maps api en gang
+- fikse error der route forsvinner ved reload (se console)
+- når man trykke på navbar og (til toppen)-knapp på mobil så forblir hover effekten
+    - kanskje kun ha hover effekt når skjermen er over en viss størrelsen
+    - finnes sikkert en smoother fiks da

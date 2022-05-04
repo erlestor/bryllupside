@@ -1,4 +1,4 @@
-import GoogleMapReact from "google-map-react"
+import { GoogleMap, DirectionsRenderer, Marker } from "@react-google-maps/api"
 import "./map.css"
 
 import { FaMapMarkerAlt } from "react-icons/fa"
@@ -16,40 +16,28 @@ const vielseLocation = {
 }
 
 const Map = ({ mapIsLoaded }) => (
-  <div className="google-map">
-    <GoogleMapReact
-      bootstrapURLKeys={{
-        key: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",
-      }}
-      defaultCenter={selskapLocation}
-      defaultZoom={16}
-      options={getMapOptions}
-    >
-      <LocationPin
-        lat={selskapLocation.lat}
-        lng={selskapLocation.lng}
-        text={selskapLocation.address}
-      />
-      <LocationPin
-        lat={vielseLocation.lat}
-        lng={vielseLocation.lng}
-        text={vielseLocation.address}
-      />
-    </GoogleMapReact>
-  </div>
+  <>
+    {mapIsLoaded ? (
+      <div className="google-map">
+        <GoogleMap
+          zoom={12}
+          center={selskapLocation}
+          mapContainerClassName="map-container"
+        >
+          <Marker
+            position={selskapLocation}
+            label="Snillet gård, Spongdalsvegen 579"
+          />
+          <Marker
+            position={vielseLocation}
+            label="Klæbu kirke, Prestegårdsvegen 43"
+          />
+        </GoogleMap>
+      </div>
+    ) : (
+      <div>Laster inn kart</div>
+    )}
+  </>
 )
-
-const LocationPin = ({ text }) => (
-  <div className="pin-container">
-    <div className="pin-text">{text}</div>
-    <FaMapMarkerAlt className="pin" size={40} />
-  </div>
-)
-
-const getMapOptions = (maps) => {
-  return {
-    mapTypeId: maps.MapTypeId.SATELLITE,
-  }
-}
 
 export default Map

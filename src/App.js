@@ -10,6 +10,8 @@ import ScrollToTop from "./components/nav/ScrollToTop"
 import Password from "./components/password/Password"
 import Transport from "./components/transport/Transport"
 
+const libraries = ["places"]
+
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
   // const [loggedIn, setLoggedIn] = useState(() => {
@@ -22,7 +24,7 @@ function App() {
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",
-    libraries: ["places"],
+    libraries,
   })
 
   const toggle = () => {
