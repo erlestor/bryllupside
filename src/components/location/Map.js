@@ -1,4 +1,4 @@
-import { GoogleMap, DirectionsRenderer, Marker } from "@react-google-maps/api"
+import { GoogleMap, Marker } from "@react-google-maps/api"
 import "./map.css"
 
 import { FaMapMarkerAlt } from "react-icons/fa"
