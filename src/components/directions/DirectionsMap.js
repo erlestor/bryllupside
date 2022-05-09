@@ -9,6 +9,7 @@ export const DirectionsMap = ({ mapIsLoaded }) => {
 
   const calculateRoute = async () => {
     // eslint-disable-next-line no-undef
+    const google = window.google
     const directionsService = new google.maps.DirectionsService()
     const results = await directionsService.route({
       origin: "Sjøgangen 2, 7010 Trondheim",

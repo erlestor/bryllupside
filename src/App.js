@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useLoadScript } from "@react-google-maps/api"
+import { useLoadScript, useJsApiLoader } from "@react-google-maps/api"
 import { Contact } from "./components/contact/Contact"
 import GiftIdeas from "./components/giftIdeas/GiftIdeas"
 import HeroText from "./components/hero/HeroText"
@@ -22,7 +22,7 @@ function App() {
   // })
   const [loggedIn, setLoggedIn] = useState(true)
 
-  const { isLoaded } = useLoadScript({
+  const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",
     libraries,
   })
@@ -53,7 +53,7 @@ function App() {
             <Navbar showNavbar={showNavbar} toggle={toggle} />
             <HeroText />
             <Info />
-            <Location mapIsLoaded={isLoaded} />
+            {/* <Location mapIsLoaded={isLoaded} /> */}
             <Transport mapIsLoaded={isLoaded} />
             <GiftIdeas />
             <Contact />
