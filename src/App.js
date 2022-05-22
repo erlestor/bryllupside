@@ -53,7 +53,7 @@ function App() {
             <Navbar showNavbar={showNavbar} toggle={toggle} />
             <HeroText />
             <Info />
-            {/* <Location mapIsLoaded={isLoaded} /> */}
+            <Location mapIsLoaded={isLoaded} />
             <Transport mapIsLoaded={isLoaded} />
             <GiftIdeas />
             <Contact />

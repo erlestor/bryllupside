@@ -6,7 +6,7 @@ const Transport = ({ mapIsLoaded }) => {
     <div className="section info-section" id="transport">
       <h1>Transport</h1>
       <h3 className="transport-info">Kommer senere</h3>
-      <DirectionsMap mapIsLoaded={mapIsLoaded} />
+      {/* <DirectionsMap mapIsLoaded={mapIsLoaded} /> */}
     </div>
   )
 }

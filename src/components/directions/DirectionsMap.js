@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react"
-import { GoogleMap, DirectionsRenderer, Marker } from "@react-google-maps/api"
+import {
+  GoogleMap,
+  DirectionsRenderer,
+  DirectionsService,
+  Marker,
+} from "@react-google-maps/api"
 import "./directions.css"
 
 export const DirectionsMap = ({ mapIsLoaded }) => {
@@ -7,33 +12,15 @@ export const DirectionsMap = ({ mapIsLoaded }) => {
 
   const havsteinbakken = { lat: 63.41073, lng: 10.37337 }
 
-  const calculateRoute = async () => {
-    // eslint-disable-next-line no-undef
-    const google = window.google
-    const directionsService = new google.maps.DirectionsService()
-    const results = await directionsService.route({
-      origin: "Sjøgangen 2, 7010 Trondheim",
-      waypoints: [
-        // using more than 10 waypoints are billed at a higher rate. check if I actually will get billed
-        {
-          location: "Nordsetvegen 470, 7540 Klæbu",
-        },
-        {
-          location: "Flatheimvegen 20, 7549 Trondheim",
-        },
-      ],
-      destination: "Spongdalsvegen 579, 7074 Spongdal",
-      // eslint-disable-next-line no-undef
-      travelMode: google.maps.TravelMode.DRIVING,
-      provideRouteAlternatives: false,
-    })
-    setDirectionsResponse(results)
-    console.log(results)
+  function directionsCallback(response) {
+    if (response !== null) {
+      if (response.status === "OK") {
+        setDirectionsResponse(response)
+      } else {
+        console.log("response: ", response)
+      }
+    }
   }
-
-  useEffect(() => {
-    calculateRoute()
-  }, [])
 
   if (!mapIsLoaded) return <div>Laster inn...</div>
   return (
@@ -42,8 +29,32 @@ export const DirectionsMap = ({ mapIsLoaded }) => {
         zoom={12}
         center={havsteinbakken}
         mapContainerClassName="map-container"
+        options={{
+          // mapTypeId: "satellite",
+          keyboardShortcuts: false,
+          disableDefaultUI: true,
+          zoomControl: true,
+        }}
       >
-        {/* <Marker position={{ lat: 63.37636, lng: 10.16502 }} label="Vielse" /> */}
+        <DirectionsService
+          // required
+          options={{
+            origin: "Spongdalsvegen 579, 7074 Spongdal",
+            waypoints: [
+              // using more than 10 waypoints are billed at a higher rate. check if I actually will get billed
+              {
+                location: "Flatheimvegen 20, 7549 Trondheim",
+              },
+              {
+                location: "Nordsetvegen 470, 7540 Klæbu",
+              },
+            ],
+            destination: "Sjøgangen 2, 7010 Trondheim",
+            travelMode: "DRIVING",
+          }}
+          // required
+          callback={directionsCallback}
+        />
         {directionsResponse && (
           <DirectionsRenderer
             directions={directionsResponse}

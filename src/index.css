@@ -81,6 +81,4 @@ p {
   position: -webkit-sticky;
   top: 0;
   user-select: none;
-  /* overflow hidden here is to fix google maps responsive issue. bad code though */
-  overflow-x: hidden;
 }

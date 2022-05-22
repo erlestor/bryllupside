@@ -15,14 +15,22 @@ const vielseLocation = {
   lng: 10.47656,
 }
 
+const center = { lat: 63.340848, lng: 10.302035 }
+
 const Map = ({ mapIsLoaded }) => (
   <>
     {mapIsLoaded ? (
       <div className="google-map">
         <GoogleMap
-          zoom={12}
-          center={selskapLocation}
+          zoom={11}
+          center={center}
           mapContainerClassName="map-container"
+          options={{
+            // mapTypeId: "satellite",
+            keyboardShortcuts: false,
+            disableDefaultUI: true,
+            zoomControl: true,
+          }}
         >
           <Marker
             position={selskapLocation}
