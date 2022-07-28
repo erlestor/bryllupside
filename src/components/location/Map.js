@@ -22,7 +22,7 @@ const Map = ({ mapIsLoaded }) => (
     {mapIsLoaded ? (
       <div className="google-map">
         <GoogleMap
-          zoom={11}
+          zoom={window.innerWidth > 768 ? 11 : 10}
           center={center}
           mapContainerClassName="map-container"
           options={{

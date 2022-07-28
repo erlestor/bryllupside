@@ -3,9 +3,8 @@ import "./info.css"
 const Info = () => {
   return (
     <div className="section info-section" id="info">
-      <h1>Generell info</h1>
-      <h3 className="info-header">Tidsplan</h3>
-      <p className="info-text">
+      <h1>Tidsplan</h1>
+      <h3 className="info-text">
         12.00 - Vielsen starter
         <br />
         15.00 - Festlokalet åpner
@@ -22,7 +21,7 @@ const Info = () => {
         <br />
         02.10 - Avgang buss
         <br />
-      </p>
+      </h3>
     </div>
   )
 }

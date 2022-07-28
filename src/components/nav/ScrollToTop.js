@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { animateScroll as scroll } from "react-scroll"
+import { AiOutlineArrowUp } from "react-icons/ai"
 
 const ScrollToTop = () => {
   const [btnDisplay, setBtnDisplay] = useState("none")
@@ -27,7 +28,7 @@ const ScrollToTop = () => {
       style={{ display: btnDisplay }}
       onClick={() => scroll.scrollToTop()}
     >
-      Til toppen
+      <AiOutlineArrowUp size={window.innerWidth > 768 ? 40 : 25} />
     </button>
   )
 }

@@ -14,13 +14,13 @@ const libraries = ["places"]
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
-  // const [loggedIn, setLoggedIn] = useState(() => {
-  //   // getting stored value
-  //   const saved = localStorage.getItem("loggedIn")
-  //   const initialValue = JSON.parse(saved)
-  //   return initialValue || false
-  // })
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("loggedIn")
+    const initialValue = JSON.parse(saved)
+    return initialValue || false
+  })
+  // const [loggedIn, setLoggedIn] = useState(true)
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyBQ2c112VK7E_b5NPUD1jVv2uorxmL1B60",

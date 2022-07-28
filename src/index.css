@@ -2,6 +2,12 @@
   --text-color: #2f2f2f;
 }
 
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,7 +33,7 @@ h3 {
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-color);
 }
 
@@ -41,9 +47,14 @@ p {
   flex-direction: column;
   align-items: center;
   width: 60vw;
-  padding: 20px;
+  padding: 40px 60px 60px 60px;
   background-color: white;
 }
+
+/* .info-section:hover {
+  width: 65vw;
+  transition: width 500ms;
+} */
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -65,7 +76,7 @@ p {
 
   .info-section {
     width: 100%;
-    padding: 20px 0 20px 0;
+    padding: 30px;
   }
 }
 
@@ -81,4 +92,5 @@ p {
   position: -webkit-sticky;
   top: 0;
   user-select: none;
+  /* overflow hidden here is to fix google maps responsive issue. bad code though */
 }
